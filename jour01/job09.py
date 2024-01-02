@@ -27,8 +27,8 @@ print(prixTTC.CalculerPrixTTC())
 
 prixTTC.modifierNom("Pain au chocolat")
 prixTTC.modifierPrixHT(5)
-print(prixTTC.CalculerTVA())
 print(prixTTC.nom)
+print(prixTTC.CalculerTVA())
 print(prixTTC.CalculerPrixTTC())
 
 prixTTC2 = Produit("Croissant", 15, 20)
