@@ -70,7 +70,7 @@ class Commande:
         
     
 commande1 = Commande(1, ["Pizza", "Pates"], "En cours")
-commande2 = Commande(2, ["Frites", "Salade"], "Terminée")
+commande2 = Commande(2, ["Frites", "Salade"], "En cours")
 
 commande1.get_numero_commande()
 commande1.get_liste_plats_commandes()
@@ -84,6 +84,7 @@ print(commande1._Commande__calculer_prix_TTC())
 commande2.get_numero_commande()
 commande2.get_liste_plats_commandes()
 commande2.ajout_plat("Pizza")
+commande2.get_liste_plats_commandes()
 commande2.set_statut_commande("Terminée")
 commande2.check_statut_commande()
 commande2.afficher_prix()
