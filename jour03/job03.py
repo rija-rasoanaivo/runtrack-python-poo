@@ -74,6 +74,7 @@ liste_de_taches1.ajouter_tache(tache2)
 liste_de_taches1.ajouter_tache(tache3)
 liste_de_taches1.afficher_liste()
 liste_de_taches1.marquer_comme_terminee(tache1)
+liste_de_taches1.supprimer_tache(tache2)
 liste_de_taches1.afficher_liste()
 liste_de_taches1.filtrer_liste("A faire")
 
