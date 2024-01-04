@@ -1,3 +1,5 @@
+import random
+
 class Personnage:
     def __init__(self, nom):
         self.__nom = nom
@@ -47,16 +49,26 @@ class Jeu:
         self.__personnages.append(self.joueur)
         self.__personnages.append(self.ennemi)
     
-    def deroulementJeu(self):
+    # def deroulementJeu(self):
+    #     while self.joueur.get_vie() > 0 and self.ennemi.get_vie() > 0:
+    #         self.joueur.attaquer(self.ennemi)
+    #         self.ennemi.attaquer(self.joueur)
+    #     if self.joueur.get_vie() <= 0:
+    #         print(f"{self.joueur.get_nom()} a perdu !")
+    #     elif self.ennemi.get_vie() <= 0:
+    #         print(f"{self.ennemi.get_nom()} a perdu !")
+        
+    def deroulementJeualeatoire(self):
         while self.joueur.get_vie() > 0 and self.ennemi.get_vie() > 0:
-            self.joueur.attaquer(self.ennemi)
-            self.ennemi.attaquer(self.joueur)
+            random.choice(self.__personnages).attaquer(random.choice(self.__personnages))
         if self.joueur.get_vie() <= 0:
             print(f"{self.joueur.get_nom()} a perdu !")
         elif self.ennemi.get_vie() <= 0:
             print(f"{self.ennemi.get_nom()} a perdu !")
 
+
 jeu = Jeu()
 
 jeu.lancerJeu()
-jeu.deroulementJeu()
+# jeu.deroulementJeu()
+jeu.deroulementJeualeatoire()
