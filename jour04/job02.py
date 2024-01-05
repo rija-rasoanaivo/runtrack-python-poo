@@ -43,6 +43,7 @@ Etudiant.afficherAge()
 Prof = Professeur()
 Prof.modifierAge(40)
 Prof.afficherAge()
+Prof.bonjour()
 print(Prof.get__matiereEnseignee())
 Prof.enseigner()
 
