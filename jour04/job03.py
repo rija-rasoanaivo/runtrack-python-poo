@@ -34,7 +34,7 @@ class Parallelepipede(Rectangle):
         self.__hauteur = hauteur
 
     def volume(self):
-        return  self.__hauteur * Rectangle.surface(self)
+        return  self.__hauteur * self.get__longueur() * self.get__largeur()
     
     def afficherVolume(self):
         print(f"Le volume est de {self.volume()}")
