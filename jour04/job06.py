@@ -32,6 +32,9 @@ class Vehicule:
     def informationsVehicule(self):
         return "Marque: " + self.__marque + "\nModèle: " + self.__modele + "\nAnnée: " + str(self.__annee) + "\nPrix: " + str(self.__prix) + " €"
     
+    def demarrer(sefl):
+        print("Attention, je roule")
+    
 class Voiture(Vehicule):
     def __init__(self, marque, modele, annee, prix, nbPortes = 4):
         Vehicule.__init__(self, marque, modele, annee, prix)
@@ -46,6 +49,9 @@ class Voiture(Vehicule):
     def informationsVehicule(self):
         return "Marque: " + self.get__marque() + "\nModèle: " + self.get__modele() + "\nAnnée: " + str(self.get__annee()) + "\nPrix: " + str(self.get__prix()) + " €" + "\nNombre de portes: " + str(self.__nbPortes)
     
+    def demarrer(self):
+        print("Vroum vroum")
+    
 class Moto(Vehicule):
     def __init__(self, marque, modele, annee, prix, roues=2):
         Vehicule.__init__(self, marque, modele, annee, prix)
@@ -59,6 +65,11 @@ class Moto(Vehicule):
 
     def informationsVehicule(self):
         return "Marque: " + self.get__marque() + "\nModèle: " + self.get__modele() + "\nAnnée: " + str(self.get__annee()) + "\nPrix: " + str(self.get__prix()) + " €" + "\nNombre de roues: " + str(self.get__roues())
+    
+    def demarrer(self):
+        print("Vroum")
+    
+
 
 Clio = Voiture("Renault", "Clio", 2019, 15000)
 print(Clio.informationsVehicule())
@@ -66,7 +77,8 @@ print(Clio.get__nbPortes())
 Clio.set__nbPortes(5)
 print(Clio.get__nbPortes())
 print(Clio.informationsVehicule())
+Clio.demarrer()
 
 Moto1 = Moto("Yamaha", "MT-07", 2019, 7000)
 print(Moto1.informationsVehicule())
-
+Moto1.demarrer()
